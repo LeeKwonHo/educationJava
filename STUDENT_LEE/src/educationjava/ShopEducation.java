@@ -26,6 +26,8 @@ public class ShopEducation {
 		System.out.println("빵의 갯수: " + shopInfor.order + "개 입니다.");
 		System.out.println("총 금액: " + shopInfor.totalPrice + "원 입니다.");
 	
+		
+		sc.close();
 	}
 
 }
