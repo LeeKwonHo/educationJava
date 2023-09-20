@@ -9,7 +9,7 @@ public class ShopInfor {
 	public ShopInfor() {
 	}
 
-	public int getCount(int price) {
+	public int getPrice(int price) {
 		return this.price = price;
 	}
 	

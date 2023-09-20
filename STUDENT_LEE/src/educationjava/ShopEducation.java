@@ -13,7 +13,7 @@ public class ShopEducation {
 		System.out.println("빵의 가격을 입력하세요: ");
 		price = sc.nextInt();
 		
-		shopInfor.getCount(price);
+		shopInfor.getPrice(price);
 		
 		System.out.println("빵의 갯수를 입력하세요: ");
 		order = sc.nextInt();
