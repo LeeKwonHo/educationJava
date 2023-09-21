@@ -22,8 +22,10 @@ public class RanbomHoleJjackInfo {
 		
 		if(userChoice == 1) {
 			choice = "홀";
-		}else {
+		}else if(userChoice == 2){
 			choice = "짝";
+		}else {
+			System.out.println("선택지가 존재하지 않습니다. 패배로 간주합니다.");
 		}
 		System.out.println("당신의 선택:" + choice);
 	}
