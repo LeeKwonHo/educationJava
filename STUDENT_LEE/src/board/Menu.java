@@ -20,6 +20,12 @@ public class Menu {
 
 			if (1 == choice) {
 				db.showList();
+				if (db.getSize() > 0) {
+
+				System.out.println("==게시글 번호를 선택==");
+				int bNum = sc.nextInt();
+				db.showContents(bNum);
+				}
 			}
 			if (2 == choice) {
 				db.writeBoard();
@@ -29,5 +35,6 @@ public class Menu {
 			}
 		}
 		System.out.println("종료");
+		sc.close();
 	}
 }

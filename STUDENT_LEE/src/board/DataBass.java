@@ -14,17 +14,18 @@ public class DataBass {
 		if (0 == list.size()) {
 			System.out.println("====게시물 없음====");
 		}
-		
+
 		for (int i = 0; i < list.size(); i++) {
 			Board board = (Board) list.get(i);
-			
+
 			System.out.println("번호: " + board.getNumber());
 			System.out.println("제목: " + board.getTitle());
-			System.out.println("내용: " + board.getContents());
-			System.out.println("작성자: " + board.getWriter());
-			System.out.println("작성일시: " + board.getDate());
+//			System.out.println("내용: " + board.getContents());
+//			System.out.println("작성자: " + board.getWriter());
+//			System.out.println("작성일시: " + board.getDate());
 			System.out.println("-----------------------");
 		}
+
 	}
 
 	void writeBoard() {
@@ -53,4 +54,24 @@ public class DataBass {
 		return dateTime.format(formatter);
 	}
 
+	void showContents(int bNum) {
+		for (int i = 0; i < list.size(); i++) {
+			Board board = (Board) list.get(i);
+			if (board.getNumber() == bNum) {
+				System.out.println("------------------------");
+				System.out.println("번호: " + board.getNumber());
+				System.out.println("제목: " + board.getTitle());
+				System.out.println("내용: " + board.getContents());
+				System.out.println("작성자: " + board.getWriter());
+				System.out.println("작성일시: " + board.getDate());
+				System.out.println("-----------------------");
+				break;
+			}
+		}
+
+	}
+
+	int getSize() {
+		return this.list.size();
+	}
 }
