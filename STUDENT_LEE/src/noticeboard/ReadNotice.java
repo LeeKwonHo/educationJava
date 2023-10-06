@@ -10,28 +10,30 @@ public class ReadNotice {
 	NoticeBean bean = new NoticeBean();
 
 	void showList() {
-		if (bean.getNoticeNumber() == 0) {
+		if (writeNotice.list.size() == 0) {
 			System.out.println("게시물이 존재하지 않습니다.\n");
 		}
 
-		for (int i = 0; i <= bean.getNoticeNumber(); i++) {
-			bean = (NoticeBean) writeNotice.list.get(i);
+		if (writeNotice.list.size() != 0) {
+			for (int i = 0; i <= writeNotice.list.size(); i++) {
+				bean = (NoticeBean) writeNotice.list.get(i);
 
-			System.out.println("=================================");
-			System.out.println("글 번호: " + bean.getNoticeNumber());
-			System.out.println("글 제목: " + bean.getNoticeTitle() + "\n");
-		}
-
-		if (bean.getNoticeNumber() > 0) {
-			System.out.println("보고싶은 게시물의 번호를 선택하시오: \n");
-			int userChoice = sc.nextInt();
-
-			if (userChoice == bean.getNoticeNumber()) {
+				System.out.println("=================================");
 				System.out.println("글 번호: " + bean.getNoticeNumber());
-				System.out.println("제목: " + bean.getNoticeTitle());
-				System.out.println("내용: " + bean.getNoticeContents());
-				System.out.println("작성자: " + bean.getNoticeWriter());
-				System.out.println("작성일지: " + bean.getNoticeWritDate());
+				System.out.println("글 제목: " + bean.getNoticeTitle() + "\n");
+
+				System.out.println("보고싶은 게시물의 번호를 선택하시오: \n");
+				int userChoice = sc.nextInt();
+
+				if (userChoice == bean.getNoticeNumber()) {
+					System.out.println("글 번호: " + bean.getNoticeNumber());
+					System.out.println("제목: " + bean.getNoticeTitle());
+					System.out.println("내용: " + bean.getNoticeContents());
+					System.out.println("작성자: " + bean.getNoticeWriter());
+					System.out.println("작성일지: " + bean.getNoticeWritDate());
+				} else if (userChoice != bean.getNoticeNumber()) {
+					System.out.println("번호가 일치하지 않습니다.");
+				}
 			}
 		}
 	}
