@@ -17,10 +17,11 @@ public class BoardMenu {
 
 			if (userPick == 1) {
 				board.showBoardList();
-
-				System.out.println("게시물 번호 선택:");
-				int getListNumber = sc.nextInt();
-				board.getNoticeContents(getListNumber);
+				if (board.list.size() > 0) {
+					System.out.println("게시물 번호 선택:");
+					int getListNumber = sc.nextInt();
+					board.getNoticeContents(getListNumber);
+				}
 			}
 			if (userPick == 2) {
 				board.setBoard();

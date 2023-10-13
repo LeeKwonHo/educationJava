@@ -28,6 +28,8 @@ public class BoardSetGet {
 
 		boardinfo.setBoardnumber(list.size() + 1);
 		boardinfo.setBoardDate(getDate());
+		
+		list.add(boardinfo);
 	}
 
 	void showBoardList() {
