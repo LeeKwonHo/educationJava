@@ -16,7 +16,6 @@ public class DbConnetionEdu {
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl"
 					, ""//Oracle user
 					, "");//Oracle PassWord
-
 			System.out.println("연결 성공");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
