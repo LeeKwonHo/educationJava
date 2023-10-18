@@ -41,7 +41,13 @@ public class UserLogin {
 			pstmt.setString(6, sc.nextLine());
 
 			int rows = pstmt.executeUpdate();
-			System.out.println("저장된 행 수: " + rows);
+			
+			if(rows == 0) {
+				System.out.println("DB저장 실패");
+			}else {
+				System.out.println("DB저장 성공" + rows);				
+			}
+			
 			
 			//PreparedStatement 닫기
 			pstmt.close();
