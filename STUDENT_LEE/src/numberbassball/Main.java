@@ -17,8 +17,12 @@ public class Main {
 	            System.out.println("스트라이크: " + strikes + ", 볼: " + balls);
 	            
 	            if (strikes == 3) {
-	                System.out.println("축하합니다! 정답을 맞췄습니다.");
+	                System.out.println("축하합니다! 정답을 맞췄습니다!");
 	                break;
+	            }else if(strikes == 1) {
+	            	System.out.println("까비~");
+	            }else if(strikes == 2){
+	            	System.out.println("까까비~");
 	            }
 	            
 	            attempts++;
