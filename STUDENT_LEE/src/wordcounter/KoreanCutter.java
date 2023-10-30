@@ -16,7 +16,7 @@ public class KoreanCutter {
 
         // 정규 표현식을 사용하여 한국어 단어 추출
         
-        Pattern pattern = Pattern.compile("\\b[가-힣]+\\b" + "\\b[ㄱ-ㅎ]+\\b" + "[^a-z ]");
+        Pattern pattern = Pattern.compile("\\b[가-힣ㄱ-ㅎ^a-z]+\\b");
         Matcher matcher = pattern.matcher(inputText);
 
         // 단어 빈도를 저장할 맵
